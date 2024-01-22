@@ -58,6 +58,9 @@ function groupOne(obj) {
 
             let name_space = document.getElementById('name');// h1 to show name of the students
             let onstage_div = document.getElementById("items-div");// div to show the participating items
+            let num_admit = document.getElementById('num-admit');
+            let category = document.getElementById('cate');
+            let class_space = document.getElementById('class');
 
             var colLength = data.table.cols.length;
 
@@ -72,6 +75,9 @@ function groupOne(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
+                        num_admit.innerHTML = data.table.rows[i].c[69].v;
+                        category.innerHTML = data.table.rows[i].c[68].v;
+                        class_space.innerHTML = data.table.rows[i].c[67].v;
                         dataSearch_al_on(i);
 
                         showContainerBox();
@@ -172,6 +178,9 @@ function groupOne(obj) {
 
             let name_space = document.getElementById('name');// h1 to show name of the students
             let onstage_div = document.getElementById("items-div");// div to show the participating items
+            let num_admit = document.getElementById('num-admit');
+            let category = document.getElementById('cate');
+            let class_space = document.getElementById('class');
 
             var colLength = data.table.cols.length;
 
@@ -182,6 +191,9 @@ function groupOne(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
+                        num_admit.innerHTML = data.table.rows[i].c[69].v;
+                        category.innerHTML = data.table.rows[i].c[68].v;
+                        class_space.innerHTML = data.table.rows[i].c[67].v;
                         dataSearch_al_on(i);
 
                         showContainerBox();
@@ -301,6 +313,9 @@ function groupTwo(obj) {
 
             let name_space = document.getElementById('name');// h1 to show name of the students
             let onstage_div = document.getElementById("items-div");// div to show the participating items
+            let num_admit = document.getElementById('num-admit');
+            let category = document.getElementById('cate');
+            let class_space = document.getElementById('class');
 
             var colLength = data.table.cols.length;
 
@@ -314,6 +329,9 @@ function groupTwo(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
+                        num_admit.innerHTML = data.table.rows[i].c[69].v;
+                        category.innerHTML = data.table.rows[i].c[68].v;
+                        class_space.innerHTML = data.table.rows[i].c[67].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -409,6 +427,9 @@ function groupTwo(obj) {
 
             let name_space = document.getElementById('name');// h1 to show name of the students
             let onstage_div = document.getElementById("items-div");// div to show the participating items
+            let num_admit = document.getElementById('num-admit');
+            let category = document.getElementById('cate');
+            let class_space = document.getElementById('class');
 
             var colLength = data.table.cols.length;
 
@@ -422,6 +443,9 @@ function groupTwo(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
+                        num_admit.innerHTML = data.table.rows[i].c[69].v;
+                        category.innerHTML = data.table.rows[i].c[68].v;
+                        class_space.innerHTML = data.table.rows[i].c[67].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -539,6 +563,9 @@ function groupThree(obj) {
 
             let name_space = document.getElementById('name');// h1 to show name of the students
             let onstage_div = document.getElementById("items-div");// div to show the participating items
+            let num_admit = document.getElementById('num-admit');
+            let category = document.getElementById('cate');
+            let class_space = document.getElementById('class');
 
             var colLength = data.table.cols.length;
 
@@ -552,6 +579,9 @@ function groupThree(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
+                        num_admit.innerHTML = data.table.rows[i].c[69].v;
+                        category.innerHTML = data.table.rows[i].c[68].v;
+                        class_space.innerHTML = data.table.rows[i].c[67].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -648,6 +678,9 @@ function groupThree(obj) {
 
             let name_space = document.getElementById('name');// h1 to show name of the students
             let onstage_div = document.getElementById("items-div");// div to show the participating items
+            let num_admit = document.getElementById('num-admit');
+            let category = document.getElementById('cate');
+            let class_space = document.getElementById('class');
 
             var colLength = data.table.cols.length;
 
@@ -661,6 +694,9 @@ function groupThree(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
+                        num_admit.innerHTML = data.table.rows[i].c[69].v;
+                        category.innerHTML = data.table.rows[i].c[68].v;
+                        class_space.innerHTML = data.table.rows[i].c[67].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -779,6 +815,9 @@ function groupFour(obj) {
 
             let name_space = document.getElementById('name');// h1 to show name of the students
             let onstage_div = document.getElementById("items-div");// div to show the participating items
+            let num_admit = document.getElementById('num-admit');
+            let category = document.getElementById('cate');
+            let class_space = document.getElementById('class');
 
             var colLength = data.table.cols.length;
 
@@ -792,6 +831,9 @@ function groupFour(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
+                        num_admit.innerHTML = data.table.rows[i].c[69].v;
+                        category.innerHTML = data.table.rows[i].c[68].v;
+                        class_space.innerHTML = data.table.rows[i].c[67].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -886,6 +928,9 @@ function groupFour(obj) {
 
             let name_space = document.getElementById('name');// h1 to show name of the students
             let onstage_div = document.getElementById("items-div");// div to show the participating items
+            let num_admit = document.getElementById('num-admit');
+            let category = document.getElementById('cate');
+            let class_space = document.getElementById('class');
 
             var colLength = data.table.cols.length;
 
@@ -899,6 +944,9 @@ function groupFour(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
+                        num_admit.innerHTML = data.table.rows[i].c[69].v;
+                        category.innerHTML = data.table.rows[i].c[68].v;
+                        class_space.innerHTML = data.table.rows[i].c[67].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
