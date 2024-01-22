@@ -399,6 +399,7 @@ function groupTwo(obj) {
             });
 
             function dataSearch_al_on(index) {
+                let colLength_items = colLength - 5
                 for (let i = 1; i < colLength_items; i++) {
                     if (i == 23 || i == 24 || i == 49 || i == 50 || i == 51) {//add
                         console.log("continued : " + i);
