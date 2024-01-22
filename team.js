@@ -1,14 +1,45 @@
+function authenticateUser(teamFunction) {
+    // Prompt user for username and password
+    const username = prompt('Enter your username:');
+    const password = prompt('Enter your password:');
 
+    // Check if the provided username and password are correct
+    const isAuthenticationSuccessful = checkCredentials(username, password);
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Trigger click on the first button when the page loads
-    //const firstButton = document.querySelector('.team-btn');
-    //firstButton.click();
-});
+    if (isAuthenticationSuccessful) {
+        // If authentication is successful, call the team-specific function
+        teamFunction();
+    } else {
+        // If authentication fails, display an error message or take appropriate action
+        alert('dai swantham group aano nokkunne');
+    }
+}
+
+function checkCredentials(username, password) {
+    // Replace these static values with your actual username and password for each team
+    const teamOneCredentials = { username: 'team1user', password: 'team1pass' };
+    const teamTwoCredentials = { username: 'team2user', password: 'team2pass' };
+    const teamThreeCredentials = { username: 'team3user', password: 'team3pass' };
+    const teamFourCredentials = { username: 'team4user', password: 'team4pass' };
+
+    // Check if the provided username and password match the credentials for the respective team
+    if (username === teamOneCredentials.username && password === teamOneCredentials.password) {
+        return true;
+    } else if (username === teamTwoCredentials.username && password === teamTwoCredentials.password) {
+        return true;
+    } else if (username === teamThreeCredentials.username && password === teamThreeCredentials.password) {
+        return true;
+    } else if (username === teamFourCredentials.username && password === teamFourCredentials.password) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 //-----------------------------------------------TEAM-A START---------------------------------------------------------------
 
 function groupOne(obj) {
+    authenticateUser(() => {
     highlightButton(obj);
     let divElement1 = document.getElementById('team-a');//parentdiv of  div , which displays names of student of team 1
     let container1 = document.getElementById('content1');
@@ -255,7 +286,7 @@ function groupOne(obj) {
             }
         }
         )
-
+    })
 }
 //-----------------------------------------------TEAM-A TH END---------------------------------------------------------------
 
@@ -264,6 +295,7 @@ function groupOne(obj) {
 //-----------------------------------------------TEAM-B START---------------------------------------------------------------
 
 function groupTwo(obj) {
+    authenticateUser(() => {
     highlightButton(obj);
     let divElement2 = document.getElementById('team-b');//parentdiv of  div , which displays names of student of team 2
     let container1 = document.getElementById('content1');
@@ -506,6 +538,7 @@ function groupTwo(obj) {
             }
         }
         )
+    })
 }
 //-----------------------------------------------TEAM-B TH END---------------------------------------------------------------
 
@@ -514,6 +547,7 @@ function groupTwo(obj) {
 //-----------------------------------------------TEAM-C START---------------------------------------------------------------
 
 function groupThree(obj) {
+    authenticateUser(() =>{
     highlightButton(obj);
     let divElement3 = document.getElementById('team-c');//parentdiv of  div , which displays names of student of team 3
     let container1 = document.getElementById('content1');
@@ -757,6 +791,7 @@ function groupThree(obj) {
             }
         }
         )
+    })
 }
 //-----------------------------------------------TEAM-C TH END---------------------------------------------------------------
 
@@ -765,6 +800,7 @@ function groupThree(obj) {
 //-----------------------------------------------TEAM-D START---------------------------------------------------------------
 
 function groupFour(obj) {
+    authenticateUser(() => {
     highlightButton(obj);
     let divElement4 = document.getElementById('team-d');//parentdiv of  div , which displays names of student of team 4
     let container1 = document.getElementById('content1');
@@ -1007,6 +1043,7 @@ function groupFour(obj) {
             }
         }
         )
+    })
 }
 //-----------------------------------------------TEAM-D TH END---------------------------------------------------------------
 
