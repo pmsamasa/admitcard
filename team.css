@@ -1,0 +1,364 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@font-face {
+    font-family: Anek-Malayalam;
+    src: url(../webfonts/AnekMalayalam-VariableFont_wdth\,wght.ttf);
+}
+
+/* Variables */
+:root {
+    /* bg colors */
+    --bg-black: hsl(42, 26%, 77%);
+    --bg-dark-gray: hsl(345, 90%, 60%);
+
+    /* border colors */
+    --border-color: hsl(0, 2%, 96%);
+
+    /* text color */
+    --text-color: hsl(0, 0%, 0%);   
+
+    /* fonts */
+    --font-size-head: clamp(27px, 4vw, 50px);
+    --font-size-image: ;
+    --font-size-mem: 22px;
+    --font-size-btn: 4vw;
+    --font-famil: 'Ubuntu', sans-serif;
+    --font-famil-btn: 'Montserrat', sans-serif;
+
+}
+
+
+/* Base */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-black);
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* container */
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.section-head {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.section-head-title {
+    font-size: var(--font-size-head);
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-family: var(--font-famil);
+    margin-bottom: 3vw;
+}
+
+
+
+/* header */
+.tm-div {
+    display: none;
+}
+
+.tm-div-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.team-btn {
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+    color: var(--text-color);
+    margin: 5px;
+    text-transform: uppercase;
+    font-size: var(--font-size-btn);
+    font-family: var(--font-famil-btn);
+    font-weight: 500;
+    background-color: var(--bg-dark-gray);
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-style: solid;
+    border-width: 5px;
+    box-shadow: var(--text-color) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+}
+
+@media (max-width: 900px) {
+    .tm-div-btn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+.team-btn:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+
+.team-btn:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.active {
+    color: var(--bg-black);
+    background-color: var(--text-color);
+}
+
+/* images */
+
+.image-container {
+    text-align: center;
+}
+
+.image {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+    width: 20vw;
+}
+
+.image.middle {
+    margin-top: -20px;
+    /* Adjust the value to control the vertical position */
+}
+
+.aju {
+    width: 90%;
+}
+
+@media (max-width: 900px) {
+    .image {
+        width: 25vw;
+    }
+
+    .aju {
+        width: 100%;
+    }
+}
+
+
+/* overlay */
+/* Add this CSS for overlay effect */
+.image:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay {
+    position: relative;
+    top: -15vw;
+    left: 1vw;
+    width: 90%;
+    min-height: 0vw;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* Optional: Add styles for the overlay text */
+.image-overlay p {
+    font-size: 18px;
+    /* Adjust the font size as needed */
+}
+
+/* Optional: Adjust the overlay positioning */
+.image-overlay.middle {
+    margin-top: -20px;
+}
+
+/* member div*/
+.mem-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.aal {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--bg-dark-gray);
+    text-align: center;
+    margin: 5px;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border: 2px solid var(--text-color);
+    box-shadow: var(--text-color) -5px 15px 25px -15px;
+    color: var(--text-color);
+    font-size: var(--font-size-mem);
+}
+
+
+.aal:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+
+@media (max-width: 720px) {
+    .names {
+        font-size: 25px;
+    }
+}
+
+/*lIGHTBOX SETUP*/
+
+.container-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox {
+    background-color: #fff;
+    color: black;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.admit-card {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.items {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.items p {
+    flex: 1;
+    font-family: Anek-Malayalam;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px;
+}
+
+.admit-card h1,
+.admit-card h3 {
+    font-family: var(--font-famil);
+    border: 3px solid black;
+    padding: 3px;
+    margin: 5px;
+    border-radius: 5px;
+
+}
+
+@media print {
+
+    /* Your print-specific styles here */
+    .container-box {
+        display: block !important;
+    }
+
+    /* Add styles to hide unwanted elements */
+    body * {
+        display: none;
+    }
+
+    .container-box,
+    .container-box * {
+        display: block;
+    }
+
+    .lightbox {
+        display: flex;
+        align-items: center;
+    }
+
+    .admit-card {
+        display: block;
+        max-width: 80%;
+        max-height: 80%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .items {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prin {
+        visibility: hidden;
+    }
+
+    /* Adjust the above based on your HTML structure */
+}
+
+.prin {
+    padding: 10px;
+    padding-left: 15px;
+    background-color: rgb(3, 178, 237);
+    cursor: pointer;
+    color: white;
+    position: relative;
+    left: 25%;
+    top: 25%;
+    font-family: var(--font-famil);
+    border-radius: 8px;
+    margin-left: 23%;
+}

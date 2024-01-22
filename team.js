@@ -1,0 +1,921 @@
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Trigger click on the first button when the page loads
+    const firstButton = document.querySelector('.team-btn');
+    firstButton.click();
+});
+
+//-----------------------------------------------TEAM-A START---------------------------------------------------------------
+
+function groupOne(obj) {
+    highlightButton(obj);
+    let divElement1 = document.getElementById('team-a');//parentdiv of  div , which displays names of student of team 1
+    let container1 = document.getElementById('content1');
+    let container2 = document.getElementById('content2');
+    let container3 = document.getElementById('content3');
+    let container4 = document.getElementById('content4');
+    container1.style.display = 'block';
+    container2.style.display = 'none';
+    container3.style.display = 'none';
+    container4.style.display = 'none';
+
+    let team_space = document.getElementById('team');//space on the card where the name of team is shown
+    let nameOfTeam = obj.textContent;
+    team_space.innerHTML = nameOfTeam;
+
+    //-----------------------------------------------TEAM-A AL START---------------------------------------------------------------
+    let SHEET_ID_ = '1U9sExd3ImkNR325OOD9QLcpr_1HRgbWSi3Ammc6Lstw';
+    let SHEET_TITLE_ = 'Sheet1';
+    let SHEET_RANGE_ = 'B3:BH31';
+
+    let FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
+
+    fetch(FULL_URL_)
+        .then(res => res.text())
+        .then(rep => {
+            let data = JSON.parse(rep.substr(47).slice(0, -2));
+            var rowLength = data.table.rows.length;
+
+            for (let i = 0; i < rowLength; i++) {
+                if (data.table.rows[i].c[0].v != null) {
+                    let newDiv = document.createElement('div');
+                    newDiv.id = ("box" + i);
+                    newDiv.className = "aal";
+                    divElement1.appendChild(newDiv);
+                    newDiv.innerHTML = data.table.rows[i].c[0].v;
+
+
+                    newDiv.onclick = function () {
+
+                        displayValue_al_on(this.textContent);
+
+                    }
+                } else {
+                    continue;
+                }
+            }
+
+            let name_space = document.getElementById('name');// h1 to show name of the students
+            let onstage_div = document.getElementById("items-div");// div to show the participating items
+
+            var colLength = data.table.cols.length;
+
+
+
+
+            function displayValue_al_on(name_div) {
+                // Clear the existing content in onstage_div
+                const onstage_div = document.getElementById("items-div");
+                onstage_div.innerHTML = '';
+
+                for (let i = 0; i < rowLength; i++) {
+                    if (data.table.rows[i].c[0].v == name_div) {
+                        name_space.innerHTML = data.table.rows[i].c[0].v;
+                        dataSearch_al_on(i);
+
+                        showContainerBox();
+                        return i;
+                    }
+                }
+            }
+
+            function showContainerBox() {
+                // Display the container-box
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
+            }
+
+            function hideContainerBox() {
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+
+            function closeContainerBox() {
+                hideContainerBox();
+            }
+
+            // Add an event listener to close the container box on overlay click
+            const overlay = document.querySelector('.container-box'); // Adjust the selector based on your HTML
+            overlay.addEventListener('click', closeContainerBox);
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeContainerBox();
+                }
+            });
+
+
+
+            function dataSearch_al_on(index) {
+                var pass = 1;
+                console.log(index);
+                for (let i = 1; i < colLength; i++) {
+                    if (data.table.rows[index].c[i].v == true) {
+
+                        insertElement_al_on(onstage_div, data.table.cols[i].label);//name
+
+                    }
+                }
+            }
+
+            function insertElement_al_on(div, data) {
+                let newElement = document.createElement('p');
+                newElement.className = 'programs';
+                div.append(newElement);
+                newElement.innerHTML = data;
+            }
+
+        }
+        )
+    //-----------------------------------------------TEAM-A AL END---------------------------------------------------------------    
+    //-----------------------------------------------TEAM-A TH START---------------------------------------------------------------    
+    SHEET_ID_ = '1U9sExd3ImkNR325OOD9QLcpr_1HRgbWSi3Ammc6Lstw';
+    SHEET_TITLE_ = 'Sheet1';
+    SHEET_RANGE_ = 'B34:AW47';
+
+    FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
+
+    fetch(FULL_URL_)
+        .then(res => res.text())
+        .then(rep => {
+            let data = JSON.parse(rep.substr(47).slice(0, -2));
+            var rowLength = data.table.rows.length;//parent div containin the card div
+
+            for (let i = 0; i < rowLength; i++) {
+                if (data.table.rows[i].c[0].v != null) {
+                    let newDiv = document.createElement('div');
+                    newDiv.id = ("box" + i);
+                    newDiv.className = "aal";
+                    divElement1.appendChild(newDiv);
+                    newDiv.innerHTML = data.table.rows[i].c[0].v;
+
+
+                    newDiv.onclick = function () {
+                        displayValue_al_on(this.textContent);
+
+                    }
+                } else {
+                    continue;
+                }
+            }
+
+            let name_space = document.getElementById('name');// h1 to show name of the students
+            let onstage_div = document.getElementById("items-div");// div to show the participating items
+
+            var colLength = data.table.cols.length;
+
+            function displayValue_al_on(name_div) {
+                // Clear the existing content in onstage_div
+                const onstage_div = document.getElementById("items-div");
+                onstage_div.innerHTML = '';
+                for (let i = 0; i < rowLength; i++) {
+                    if (data.table.rows[i].c[0].v == name_div) {
+                        name_space.innerHTML = data.table.rows[i].c[0].v;
+                        dataSearch_al_on(i);
+
+                        showContainerBox();
+                        return i;
+                    }
+                }
+            }
+
+            function showContainerBox() {
+                // Display the container-box
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
+            }
+
+            function hideContainerBox() {
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+
+            function closeContainerBox() {
+                hideContainerBox();
+            }
+
+            // Add an event listener to close the container box on overlay click
+            const overlay = document.querySelector('.container-box'); // Adjust the selector based on your HTML
+            overlay.addEventListener('click', closeContainerBox);
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeContainerBox();
+                }
+            });
+
+
+            function dataSearch_al_on(index) {
+                for (let i = 1; i < colLength; i++) {
+
+                    if (data.table.rows[index].c[i].v == true) {
+                        insertElement_al_on(onstage_div, data.table.cols[i].label);
+
+                    }
+                }
+            }
+
+            function insertElement_al_on(div, data) {
+                let newElement = document.createElement('p');
+                newElement.className = 'programs';
+                div.append(newElement);
+                newElement.innerHTML = data;
+            }
+        }
+        )
+
+}
+//-----------------------------------------------TEAM-A TH END---------------------------------------------------------------
+
+//-----------------------------------------------TEAM-A END---------------------------------------------------------------
+
+//-----------------------------------------------TEAM-B START---------------------------------------------------------------
+
+function groupTwo(obj) {
+    highlightButton(obj);
+    let divElement2 = document.getElementById('team-b');//parentdiv of  div , which displays names of student of team 2
+    let container1 = document.getElementById('content1');
+    let container2 = document.getElementById('content2');
+    let container3 = document.getElementById('content3');
+    let container4 = document.getElementById('content4');
+    container1.style.display = 'none';
+    container2.style.display = 'block';
+    container3.style.display = 'none';
+    container4.style.display = 'none';
+
+    let team_space = document.getElementById('team');//space on the card where the name of team is shown
+    let nameOfTeam = obj.textContent;
+
+    team_space.innerHTML = nameOfTeam;
+    //-----------------------------------------------TEAM-B AL START---------------------------------------------------------------    
+
+    let SHEET_ID_ = '1fy4PgnXgTnX9LeADb3v-Qp57Caz0C4tGjwRfbF1slQk';
+    let SHEET_TITLE_ = 'Sheet1';
+    let SHEET_RANGE_ = 'B3:BH31';
+
+    let FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
+
+    fetch(FULL_URL_)
+        .then(res => res.text())
+        .then(rep => {
+            let data = JSON.parse(rep.substr(47).slice(0, -2));
+            var rowLength = data.table.rows.length;
+
+            for (let i = 0; i < rowLength; i++) {
+
+                if (data.table.rows[i].c[0].v != null) {
+                    let newDiv = document.createElement('div');
+                    newDiv.id = ("box" + i);
+                    newDiv.className = "aal";
+                    divElement2.appendChild(newDiv);
+                    newDiv.innerHTML = data.table.rows[i].c[0].v;
+
+
+                    newDiv.onclick = function () {
+                        displayValue_al_on(this.textContent);
+
+                    }
+                } else {
+                    continue;
+                }
+            }
+
+            let name_space = document.getElementById('name');// h1 to show name of the students
+            let onstage_div = document.getElementById("items-div");// div to show the participating items
+
+            var colLength = data.table.cols.length;
+
+
+
+
+            function displayValue_al_on(name_div) {
+                // Clear the existing content in onstage_div
+                const onstage_div = document.getElementById("items-div");
+                onstage_div.innerHTML = '';
+                for (let i = 0; i < rowLength; i++) {
+                    if (data.table.rows[i].c[0].v == name_div) {
+                        name_space.innerHTML = data.table.rows[i].c[0].v;
+                        dataSearch_al_on(i);
+                        showContainerBox();
+                        return i;
+                    }
+                }
+            }
+
+            function showContainerBox() {
+                // Display the container-box
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'block';
+            }
+
+            function hideContainerBox() {
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+
+            function closeContainerBox() {
+                hideContainerBox();
+            }
+
+            // Add an event listener to close the container box on overlay click
+            const overlay = document.querySelector('.container-box'); // Adjust the selector based on your HTML
+            overlay.addEventListener('click', closeContainerBox);
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeContainerBox();
+                }
+            });
+
+            function dataSearch_al_on(index) {
+                var pass = 1;
+                for (let i = 1; i < colLength; i++) {
+                    console.log(i);
+                    if (data.table.rows[index].c[i].v == true) {
+                        insertElement_al_on(onstage_div, data.table.cols[i].label);
+
+                    }
+                }
+            }
+
+            function insertElement_al_on(div, data) {
+                let newElement = document.createElement('p');
+                newElement.className = 'programs';
+                div.append(newElement);
+                newElement.innerHTML = data;
+            }
+        }
+        )
+    //-----------------------------------------------TEAM-B AL END--------------------------------------------------------------- 
+
+    //-----------------------------------------------TEAM-B TH START---------------------------------------------------------------    
+
+    SHEET_ID_ = '1fy4PgnXgTnX9LeADb3v-Qp57Caz0C4tGjwRfbF1slQk';
+    SHEET_TITLE_ = 'Sheet1';
+    SHEET_RANGE_ = 'B34:AW47';
+    FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
+
+    fetch(FULL_URL_)
+        .then(res => res.text())
+        .then(rep => {
+            let data = JSON.parse(rep.substr(47).slice(0, -2));
+            var rowLength = data.table.rows.length;
+
+            console.log(data.table.cols)
+            for (let i = 0; i < rowLength; i++) {
+                if (data.table.rows[i].c[0].v != null) {
+                    let newDiv = document.createElement('div');
+                    newDiv.id = ("box" + i);
+                    newDiv.className = "aal";
+                    divElement2.appendChild(newDiv);
+                    newDiv.innerHTML = data.table.rows[i].c[0].v;
+
+
+                    newDiv.onclick = function () {
+                        displayValue_al_on(this.textContent);
+
+                    }
+                } else {
+                    continue;
+                }
+            }
+
+            let name_space = document.getElementById('name');// h1 to show name of the students
+            let onstage_div = document.getElementById("items-div");// div to show the participating items
+
+            var colLength = data.table.cols.length;
+
+
+
+
+            function displayValue_al_on(name_div) {
+                // Clear the existing content in onstage_div
+                const onstage_div = document.getElementById("items-div");
+                onstage_div.innerHTML = '';
+                for (let i = 0; i < rowLength; i++) {
+                    if (data.table.rows[i].c[0].v == name_div) {
+                        name_space.innerHTML = data.table.rows[i].c[0].v;
+                        dataSearch_al_on(i);
+                        showContainerBox();
+                        return i;
+                    }
+                }
+            }
+
+            function showContainerBox() {
+                // Display the container-box
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'block';
+            }
+
+            function hideContainerBox() {
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+
+            function closeContainerBox() {
+                hideContainerBox();
+            }
+
+            // Add an event listener to close the container box on overlay click
+            const overlay = document.querySelector('.container-box'); // Adjust the selector based on your HTML
+            overlay.addEventListener('click', closeContainerBox);
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeContainerBox();
+                }
+            });
+
+            function dataSearch_al_on(index) {
+                for (let i = 1; i < colLength; i++) {
+                    console.log(i);
+                    if (data.table.rows[index].c[i].v == true) {
+                        insertElement_al_on(onstage_div, data.table.cols[i].label);
+
+                    }
+                }
+            }
+
+            function insertElement_al_on(div, data) {
+                let newElement = document.createElement('p');
+                newElement.className = 'programs';
+                div.append(newElement);
+                newElement.innerHTML = data;
+            }
+        }
+        )
+}
+//-----------------------------------------------TEAM-B TH END---------------------------------------------------------------
+
+//-----------------------------------------------TEAM-B END---------------------------------------------------------------
+
+//-----------------------------------------------TEAM-C START---------------------------------------------------------------
+
+function groupThree(obj) {
+    highlightButton(obj);
+    let divElement3 = document.getElementById('team-c');//parentdiv of  div , which displays names of student of team 3
+    let container1 = document.getElementById('content1');
+    let container2 = document.getElementById('content2');
+    let container3 = document.getElementById('content3');
+    let container4 = document.getElementById('content4');
+    container1.style.display = 'none';
+    container2.style.display = 'none';
+    container3.style.display = 'block';
+    container4.style.display = 'none';
+
+    let team_space = document.getElementById('team');//space on the card where the name of team is shown
+    let nameOfTeam = obj.textContent;
+
+    team_space.innerHTML = nameOfTeam;
+    //-----------------------------------------------TEAM-C AL START---------------------------------------------------------------
+    let SHEET_ID_ = '1mhz_L4pnpQH_Z90LrDYh4e2Lj_GHEx-_M2GCd-GJwCo';
+    let SHEET_TITLE_ = 'Sheet1';
+    let SHEET_RANGE_ = 'B3:BH31';
+
+    let FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
+
+    fetch(FULL_URL_)
+        .then(res => res.text())
+        .then(rep => {
+            let data = JSON.parse(rep.substr(47).slice(0, -2));
+            var rowLength = data.table.rows.length;
+
+            for (let i = 0; i < rowLength; i++) {
+
+                if (data.table.rows[i].c[0].v != null) {
+                    let newDiv = document.createElement('div');
+                    newDiv.id = ("box" + i);
+                    newDiv.className = "aal";
+                    divElement3.appendChild(newDiv);
+                    newDiv.innerHTML = data.table.rows[i].c[0].v;
+
+
+                    newDiv.onclick = function () {
+                        displayValue_al_on(this.textContent);
+
+                    }
+                } else {
+                    continue;
+                }
+            }
+
+            let name_space = document.getElementById('name');// h1 to show name of the students
+            let onstage_div = document.getElementById("items-div");// div to show the participating items
+
+            var colLength = data.table.cols.length;
+
+
+
+
+            function displayValue_al_on(name_div) {
+                // Clear the existing content in onstage_div
+                const onstage_div = document.getElementById("items-div");
+                onstage_div.innerHTML = '';
+                for (let i = 0; i < rowLength; i++) {
+                    if (data.table.rows[i].c[0].v == name_div) {
+                        name_space.innerHTML = data.table.rows[i].c[0].v;
+                        dataSearch_al_on(i);
+                        showContainerBox();
+                        return i;
+                    }
+                }
+            }
+
+            function showContainerBox() {
+                // Display the container-box
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'block';
+            }
+
+            function hideContainerBox() {
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+
+            function closeContainerBox() {
+                hideContainerBox();
+            }
+
+            // Add an event listener to close the container box on overlay click
+            const overlay = document.querySelector('.container-box'); // Adjust the selector based on your HTML
+            overlay.addEventListener('click', closeContainerBox);
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeContainerBox();
+                }
+            });
+
+            function dataSearch_al_on(index) {
+                var pass = 1;
+                for (let i = 1; i < colLength; i++) {
+                    console.log(i);
+                    if (data.table.rows[index].c[i].v == true) {
+                        insertElement_al_on(onstage_div, data.table.cols[i].label);
+
+                    }
+                }
+            }
+
+            function insertElement_al_on(div, data) {
+                let newElement = document.createElement('p');
+                newElement.className = 'programs';
+                div.append(newElement);
+                newElement.innerHTML = data;
+            }
+        }
+        )
+    //-----------------------------------------------TEAM-C AL END---------------------------------------------------------------
+
+    //-----------------------------------------------TEAM-C TH START---------------------------------------------------------------
+    SHEET_ID_ = '1mhz_L4pnpQH_Z90LrDYh4e2Lj_GHEx-_M2GCd-GJwCo';
+    SHEET_TITLE_ = 'Sheet1';
+    SHEET_RANGE_ = 'B34:AW47';
+
+    FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
+
+    fetch(FULL_URL_)
+        .then(res => res.text())
+        .then(rep => {
+            let data = JSON.parse(rep.substr(47).slice(0, -2));
+            var rowLength = data.table.rows.length;
+
+            for (let i = 0; i < rowLength; i++) {
+
+                if (data.table.rows[i].c[0].v != null) {
+                    let newDiv = document.createElement('div');
+                    newDiv.id = ("box" + i);
+                    newDiv.className = "aal";
+                    divElement3.appendChild(newDiv);
+                    newDiv.innerHTML = data.table.rows[i].c[0].v;
+
+
+                    newDiv.onclick = function () {
+                        displayValue_al_on(this.textContent);
+
+                    }
+                } else {
+                    continue;
+                }
+            }
+
+            let name_space = document.getElementById('name');// h1 to show name of the students
+            let onstage_div = document.getElementById("items-div");// div to show the participating items
+
+            var colLength = data.table.cols.length;
+
+
+
+
+            function displayValue_al_on(name_div) {
+                // Clear the existing content in onstage_div
+                const onstage_div = document.getElementById("items-div");
+                onstage_div.innerHTML = '';
+                for (let i = 0; i < rowLength; i++) {
+                    if (data.table.rows[i].c[0].v == name_div) {
+                        name_space.innerHTML = data.table.rows[i].c[0].v;
+                        dataSearch_al_on(i);
+                        showContainerBox();
+                        return i;
+                    }
+                }
+            }
+
+            function showContainerBox() {
+                // Display the container-box
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'block';
+            }
+
+            function hideContainerBox() {
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+
+            function closeContainerBox() {
+                hideContainerBox();
+            }
+
+            // Add an event listener to close the container box on overlay click
+            const overlay = document.querySelector('.container-box'); // Adjust the selector based on your HTML
+            overlay.addEventListener('click', closeContainerBox);
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeContainerBox();
+                }
+            });
+
+            function dataSearch_al_on(index) {
+                for (let i = 1; i < colLength; i++) {
+                    console.log(i);
+                    if (data.table.rows[index].c[i].v == true) {
+                        insertElement_al_on(onstage_div, data.table.cols[i].label);
+
+                    }
+                }
+            }
+
+            function insertElement_al_on(div, data) {
+                let newElement = document.createElement('p');
+                newElement.className = 'programs';
+                div.append(newElement);
+                newElement.innerHTML = data;
+            }
+        }
+        )
+}
+//-----------------------------------------------TEAM-C TH END---------------------------------------------------------------
+
+//-----------------------------------------------TEAM-C END---------------------------------------------------------------
+
+//-----------------------------------------------TEAM-D START---------------------------------------------------------------
+
+function groupFour(obj) {
+    highlightButton(obj);
+    let divElement4 = document.getElementById('team-d');//parentdiv of  div , which displays names of student of team 4
+    let container1 = document.getElementById('content1');
+    let container2 = document.getElementById('content2');
+    let container3 = document.getElementById('content3');
+    let container4 = document.getElementById('content4');
+    container1.style.display = 'none';
+    container2.style.display = 'none';
+    container3.style.display = 'none';
+    container4.style.display = 'block';
+
+    let team_space = document.getElementById('team');//space on the card where the name of team is shown
+    let nameOfTeam = obj.textContent;
+
+    team_space.innerHTML = nameOfTeam;
+
+    //-----------------------------------------------TEAM-D AL START---------------------------------------------------------------
+    let SHEET_ID_ = '13C4Rrjs30ZthjizAnBIsUIojjV88LbwKpCRSW4RXja4';
+    let SHEET_TITLE_ = 'Sheet1';
+    let SHEET_RANGE_ = 'B3:BH31';
+
+    let FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
+
+    fetch(FULL_URL_)
+        .then(res => res.text())
+        .then(rep => {
+            let data = JSON.parse(rep.substr(47).slice(0, -2));
+            var rowLength = data.table.rows.length;
+
+            for (let i = 0; i < rowLength; i++) {
+
+                if (data.table.rows[i].c[0].v != null) {
+                    let newDiv = document.createElement('div');
+                    newDiv.id = ("box" + i);
+                    newDiv.className = "aal";
+                    divElement4.appendChild(newDiv);
+                    newDiv.innerHTML = data.table.rows[i].c[0].v;
+
+
+                    newDiv.onclick = function () {
+                        displayValue_al_on(this.textContent);
+
+                    }
+                } else {
+                    continue;
+                }
+            }
+
+            let name_space = document.getElementById('name');// h1 to show name of the students
+            let onstage_div = document.getElementById("items-div");// div to show the participating items
+
+            var colLength = data.table.cols.length;
+
+
+
+
+            function displayValue_al_on(name_div) {
+                // Clear the existing content in onstage_div
+                const onstage_div = document.getElementById("items-div");
+                onstage_div.innerHTML = '';
+                for (let i = 0; i < rowLength; i++) {
+                    if (data.table.rows[i].c[0].v == name_div) {
+                        name_space.innerHTML = data.table.rows[i].c[0].v;
+                        dataSearch_al_on(i);
+                        showContainerBox();
+                        return i;
+                    }
+                }
+            }
+
+            function showContainerBox() {
+                // Display the container-box
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'block';
+            }
+
+            function hideContainerBox() {
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+
+            function closeContainerBox() {
+                hideContainerBox();
+            }
+
+            // Add an event listener to close the container box on overlay click
+            const overlay = document.querySelector('.container-box'); // Adjust the selector based on your HTML
+            overlay.addEventListener('click', closeContainerBox);
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeContainerBox();
+                }
+            });
+
+            function dataSearch_al_on(index) {
+                var pass = 1;
+                for (let i = 1; i < colLength; i++) {
+                    console.log(i);
+                    if (data.table.rows[index].c[i].v == true) {
+                        insertElement_al_on(onstage_div, data.table.cols[i].label);
+
+                    }
+                }
+            }
+
+            function insertElement_al_on(div, data) {
+                let newElement = document.createElement('p');
+                newElement.className = 'programs';
+                div.append(newElement);
+                newElement.innerHTML = data;
+            }
+        }
+        )
+    //-----------------------------------------------TEAM-D AL END---------------------------------------------------------------
+    //-----------------------------------------------TEAM-D TH START---------------------------------------------------------------
+    SHEET_ID_ = '13C4Rrjs30ZthjizAnBIsUIojjV88LbwKpCRSW4RXja4';
+    SHEET_TITLE_ = 'Sheet1';
+    SHEET_RANGE_ = 'B34:AW47';
+
+    FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
+
+    fetch(FULL_URL_)
+        .then(res => res.text())
+        .then(rep => {
+            let data = JSON.parse(rep.substr(47).slice(0, -2));
+            var rowLength = data.table.rows.length;
+
+            for (let i = 0; i < rowLength; i++) {
+                if (data.table.rows[i].c[0].v != null) {
+                    let newDiv = document.createElement('div');
+                    newDiv.id = ("box" + i);
+                    newDiv.className = "aal";
+                    divElement4.appendChild(newDiv);
+                    newDiv.innerHTML = data.table.rows[i].c[0].v;
+
+
+                    newDiv.onclick = function () {
+                        displayValue_al_on(this.textContent);
+
+                    }
+                } else {
+                    continue;
+                }
+            }
+
+            let name_space = document.getElementById('name');// h1 to show name of the students
+            let onstage_div = document.getElementById("items-div");// div to show the participating items
+
+            var colLength = data.table.cols.length;
+
+
+
+
+            function displayValue_al_on(name_div) {
+                // Clear the existing content in onstage_div
+                const onstage_div = document.getElementById("items-div");
+                onstage_div.innerHTML = '';
+                for (let i = 0; i < rowLength; i++) {
+                    if (data.table.rows[i].c[0].v == name_div) {
+                        name_space.innerHTML = data.table.rows[i].c[0].v;
+                        dataSearch_al_on(i);
+                        showContainerBox();
+                        return i;
+                    }
+                }
+            }
+
+            function showContainerBox() {
+                // Display the container-box
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'block';
+            }
+
+            function hideContainerBox() {
+                const containerBox = document.querySelector('.container-box');
+                containerBox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+
+            function closeContainerBox() {
+                hideContainerBox();
+            }
+
+            // Add an event listener to close the container box on overlay click
+            const overlay = document.querySelector('.container-box'); // Adjust the selector based on your HTML
+            overlay.addEventListener('click', closeContainerBox);
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeContainerBox();
+                }
+            });
+
+            function dataSearch_al_on(index) {
+                for (let i = 1; i < colLength; i++) {
+                    console.log(i);
+                    if (data.table.rows[index].c[i].v == true) {
+                        insertElement_al_on(onstage_div, data.table.cols[i].label);
+                    }
+                }
+            }
+
+            function insertElement_al_on(div, data) {
+                let newElement = document.createElement('p');
+                newElement.className = 'programs';
+                div.append(newElement);
+                newElement.innerHTML = data;
+            }
+        }
+        )
+}
+//-----------------------------------------------TEAM-D TH END---------------------------------------------------------------
+
+//-----------------------------------------------TEAM-D END---------------------------------------------------------------
+function highlightButton(clickedButton) {
+    // Remove "active" class from all buttons
+    const buttons = document.querySelectorAll('.team-btn');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    // Add "active" class to the clicked button
+    clickedButton.classList.add('active');
+}
+
+const btn = document.getElementById('bttn');
+btn.addEventListener('click', function () {
+    print();
+})
+// Ensure that the print functionality is not affected
+window.onbeforeprint = function () {
+    hideContainerBox();
+};
+
+window.onafterprint = function () {
+    showContainerBox();
+};
