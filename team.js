@@ -27,7 +27,7 @@ function groupOne(obj) {
     //-----------------------------------------------TEAM-A AL START---------------------------------------------------------------
     let SHEET_ID_ = '1U9sExd3ImkNR325OOD9QLcpr_1HRgbWSi3Ammc6Lstw';
     let SHEET_TITLE_ = 'Sheet1';
-    let SHEET_RANGE_ = 'B3:BH31';
+    let SHEET_RANGE_ = 'B3:BS31';
 
     let FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
 
@@ -110,13 +110,16 @@ function groupOne(obj) {
 
 
             function dataSearch_al_on(index) {
-                var pass = 1;
-                console.log(index);
-                for (let i = 1; i < colLength; i++) {
-                    if (data.table.rows[index].c[i].v == true) {
-
-                        insertElement_al_on(onstage_div, data.table.cols[i].label);//name
-
+                let colLength_items = colLength - 5
+                for (let i = 1; i < colLength_items; i++) {
+                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 51) {//add
+                        console.log("continued : " + i);
+                        continue;
+                    } else {
+                        if (data.table.rows[index].c[i].v == true) {
+                            insertElement_al_on(onstage_div, data.table.cols[i].label);//name
+                            console.log("inserted : " + i)
+                        }
                     }
                 }
             }
@@ -134,7 +137,7 @@ function groupOne(obj) {
     //-----------------------------------------------TEAM-A TH START---------------------------------------------------------------    
     SHEET_ID_ = '1U9sExd3ImkNR325OOD9QLcpr_1HRgbWSi3Ammc6Lstw';
     SHEET_TITLE_ = 'Sheet1';
-    SHEET_RANGE_ = 'B34:AW47';
+    SHEET_RANGE_ = 'B34:BS47';
 
     FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
 
@@ -143,6 +146,8 @@ function groupOne(obj) {
         .then(rep => {
             let data = JSON.parse(rep.substr(47).slice(0, -2));
             var rowLength = data.table.rows.length;//parent div containin the card div
+
+            console.log(data.table)
 
             for (let i = 0; i < rowLength; i++) {
                 if (data.table.rows[i].c[0].v != null) {
@@ -209,13 +214,17 @@ function groupOne(obj) {
                 }
             });
 
-
             function dataSearch_al_on(index) {
-                for (let i = 1; i < colLength; i++) {
-
-                    if (data.table.rows[index].c[i].v == true) {
-                        insertElement_al_on(onstage_div, data.table.cols[i].label);
-
+                let colLength_items = colLength - 5
+                for (let i = 1; i < colLength_items; i++) {
+                    if (i == 21 || i == 22 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                        console.log("continued : " + i);
+                        continue;
+                    } else {
+                        if (data.table.rows[index].c[i].v == true) {
+                            insertElement_al_on(onstage_div, data.table.cols[i].label);//name
+                            console.log("inserted : " + i)
+                        }
                     }
                 }
             }
@@ -256,7 +265,7 @@ function groupTwo(obj) {
 
     let SHEET_ID_ = '1fy4PgnXgTnX9LeADb3v-Qp57Caz0C4tGjwRfbF1slQk';
     let SHEET_TITLE_ = 'Sheet1';
-    let SHEET_RANGE_ = 'B3:BH31';
+    let SHEET_RANGE_ = 'B3:BS30';
 
     let FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
 
@@ -267,7 +276,6 @@ function groupTwo(obj) {
             var rowLength = data.table.rows.length;
 
             for (let i = 0; i < rowLength; i++) {
-
                 if (data.table.rows[i].c[0].v != null) {
                     let newDiv = document.createElement('div');
                     newDiv.id = ("box" + i);
@@ -311,6 +319,7 @@ function groupTwo(obj) {
                 // Display the container-box
                 const containerBox = document.querySelector('.container-box');
                 containerBox.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
             }
 
             function hideContainerBox() {
@@ -334,12 +343,15 @@ function groupTwo(obj) {
             });
 
             function dataSearch_al_on(index) {
-                var pass = 1;
-                for (let i = 1; i < colLength; i++) {
-                    console.log(i);
-                    if (data.table.rows[index].c[i].v == true) {
-                        insertElement_al_on(onstage_div, data.table.cols[i].label);
-
+                for (let i = 1; i < colLength_items; i++) {
+                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 51) {//add
+                        console.log("continued : " + i);
+                        continue;
+                    } else {
+                        if (data.table.rows[index].c[i].v == true) {
+                            insertElement_al_on(onstage_div, data.table.cols[i].label);//name
+                            console.log("inserted : " + i)
+                        }
                     }
                 }
             }
@@ -358,7 +370,7 @@ function groupTwo(obj) {
 
     SHEET_ID_ = '1fy4PgnXgTnX9LeADb3v-Qp57Caz0C4tGjwRfbF1slQk';
     SHEET_TITLE_ = 'Sheet1';
-    SHEET_RANGE_ = 'B34:AW47';
+    SHEET_RANGE_ = 'B34:BS47';
     FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
 
     fetch(FULL_URL_)
@@ -367,7 +379,7 @@ function groupTwo(obj) {
             let data = JSON.parse(rep.substr(47).slice(0, -2));
             var rowLength = data.table.rows.length;
 
-            console.log(data.table.cols)
+
             for (let i = 0; i < rowLength; i++) {
                 if (data.table.rows[i].c[0].v != null) {
                     let newDiv = document.createElement('div');
@@ -412,6 +424,7 @@ function groupTwo(obj) {
                 // Display the container-box
                 const containerBox = document.querySelector('.container-box');
                 containerBox.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
             }
 
             function hideContainerBox() {
@@ -435,11 +448,16 @@ function groupTwo(obj) {
             });
 
             function dataSearch_al_on(index) {
-                for (let i = 1; i < colLength; i++) {
-                    console.log(i);
-                    if (data.table.rows[index].c[i].v == true) {
-                        insertElement_al_on(onstage_div, data.table.cols[i].label);
-
+                let colLength_items = colLength - 5
+                for (let i = 1; i < colLength_items; i++) {
+                    if (i == 21 || i == 22 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                        console.log("continued : " + i);
+                        continue;
+                    } else {
+                        if (data.table.rows[index].c[i].v == true) {
+                            insertElement_al_on(onstage_div, data.table.cols[i].label);//name
+                            console.log("inserted : " + i)
+                        }
                     }
                 }
             }
@@ -533,6 +551,7 @@ function groupThree(obj) {
                 // Display the container-box
                 const containerBox = document.querySelector('.container-box');
                 containerBox.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
             }
 
             function hideContainerBox() {
@@ -556,12 +575,16 @@ function groupThree(obj) {
             });
 
             function dataSearch_al_on(index) {
-                var pass = 1;
-                for (let i = 1; i < colLength; i++) {
-                    console.log(i);
-                    if (data.table.rows[index].c[i].v == true) {
-                        insertElement_al_on(onstage_div, data.table.cols[i].label);
-
+                let colLength_items = colLength - 5
+                for (let i = 1; i < colLength_items; i++) {
+                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 51) {//add
+                        console.log("continued : " + i);
+                        continue;
+                    } else {
+                        if (data.table.rows[index].c[i].v == true) {
+                            insertElement_al_on(onstage_div, data.table.cols[i].label);//name
+                            console.log("inserted : " + i)
+                        }
                     }
                 }
             }
@@ -579,7 +602,7 @@ function groupThree(obj) {
     //-----------------------------------------------TEAM-C TH START---------------------------------------------------------------
     SHEET_ID_ = '1mhz_L4pnpQH_Z90LrDYh4e2Lj_GHEx-_M2GCd-GJwCo';
     SHEET_TITLE_ = 'Sheet1';
-    SHEET_RANGE_ = 'B34:AW47';
+    SHEET_RANGE_ = 'B34:BS47';
 
     FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
 
@@ -634,6 +657,7 @@ function groupThree(obj) {
                 // Display the container-box
                 const containerBox = document.querySelector('.container-box');
                 containerBox.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
             }
 
             function hideContainerBox() {
@@ -657,11 +681,16 @@ function groupThree(obj) {
             });
 
             function dataSearch_al_on(index) {
-                for (let i = 1; i < colLength; i++) {
-                    console.log(i);
-                    if (data.table.rows[index].c[i].v == true) {
-                        insertElement_al_on(onstage_div, data.table.cols[i].label);
-
+                let colLength_items = colLength - 5
+                for (let i = 1; i < colLength_items; i++) {
+                    if (i == 21 || i == 22 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                        console.log("continued : " + i);
+                        continue;
+                    } else {
+                        if (data.table.rows[index].c[i].v == true) {
+                            insertElement_al_on(onstage_div, data.table.cols[i].label);//name
+                            console.log("inserted : " + i)
+                        }
                     }
                 }
             }
@@ -710,9 +739,9 @@ function groupFour(obj) {
         .then(rep => {
             let data = JSON.parse(rep.substr(47).slice(0, -2));
             var rowLength = data.table.rows.length;
-
+            console.log(rowLength);
             for (let i = 0; i < rowLength; i++) {
-
+                console.log(i)
                 if (data.table.rows[i].c[0].v != null) {
                     let newDiv = document.createElement('div');
                     newDiv.id = ("box" + i);
@@ -756,6 +785,7 @@ function groupFour(obj) {
                 // Display the container-box
                 const containerBox = document.querySelector('.container-box');
                 containerBox.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
             }
 
             function hideContainerBox() {
@@ -779,12 +809,16 @@ function groupFour(obj) {
             });
 
             function dataSearch_al_on(index) {
-                var pass = 1;
-                for (let i = 1; i < colLength; i++) {
-                    console.log(i);
-                    if (data.table.rows[index].c[i].v == true) {
-                        insertElement_al_on(onstage_div, data.table.cols[i].label);
-
+                let colLength_items = colLength - 5
+                for (let i = 1; i < colLength_items; i++) {
+                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 51) {//add
+                        console.log("continued : " + i);
+                        continue;
+                    } else {
+                        if (data.table.rows[index].c[i].v == true) {
+                            insertElement_al_on(onstage_div, data.table.cols[i].label);//name
+                            console.log("inserted : " + i)
+                        }
                     }
                 }
             }
@@ -801,7 +835,7 @@ function groupFour(obj) {
     //-----------------------------------------------TEAM-D TH START---------------------------------------------------------------
     SHEET_ID_ = '13C4Rrjs30ZthjizAnBIsUIojjV88LbwKpCRSW4RXja4';
     SHEET_TITLE_ = 'Sheet1';
-    SHEET_RANGE_ = 'B34:AW47';
+    SHEET_RANGE_ = 'B34:BS46';
 
     FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
 
@@ -855,6 +889,7 @@ function groupFour(obj) {
                 // Display the container-box
                 const containerBox = document.querySelector('.container-box');
                 containerBox.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
             }
 
             function hideContainerBox() {
@@ -878,10 +913,16 @@ function groupFour(obj) {
             });
 
             function dataSearch_al_on(index) {
-                for (let i = 1; i < colLength; i++) {
-                    console.log(i);
-                    if (data.table.rows[index].c[i].v == true) {
-                        insertElement_al_on(onstage_div, data.table.cols[i].label);
+                let colLength_items = colLength - 5
+                for (let i = 1; i < colLength_items; i++) {
+                    if (i == 21 || i == 22 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                        console.log("continued : " + i);
+                        continue;
+                    } else {
+                        if (data.table.rows[index].c[i].v == true) {
+                            insertElement_al_on(onstage_div, data.table.cols[i].label);//name
+                            console.log("inserted : " + i)
+                        }
                     }
                 }
             }
