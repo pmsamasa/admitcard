@@ -339,8 +339,6 @@ img {
   }
 
 
-
-
 @media print {
 
     /* Your print-specific styles here */
@@ -382,6 +380,12 @@ img {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .cate-div {
+        display: flex;
+        flex-flow: row;
+        width: 100%;}
+
+   
 
     .prin {
         visibility: hidden;
@@ -404,4 +408,23 @@ img {
     font-family: var(--font-famil);
     border-radius: 8px;
     margin-left: 23%;
+}
+
+@media(max-width:600px){
+    #masa {
+        font-size: 24px;
+    }
+
+    .prin{
+        width: 15%;
+        margin-left: 20%;
+        top: 105px;
+    }
+
+    .lightbox {
+        width: 90%;
+        height: 70%;
+        left: 5%;
+        top: 100px;
+    }
 }
