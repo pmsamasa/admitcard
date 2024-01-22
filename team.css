@@ -11,9 +11,10 @@
     /* bg colors */
     --bg-black: hsl(42, 26%, 77%);
     --bg-dark-gray: hsl(345, 90%, 60%);
+    --bg-loli:hsl(41, 14%, 49%);
 
     /* border colors */
-    --border-color: hsl(0, 2%, 96%);
+    --border-color: hsl(41, 22%, 69%);
 
     /* text color */
     --text-color: hsl(0, 0%, 0%);   
@@ -98,7 +99,7 @@ img {
     font-size: var(--font-size-btn);
     font-family: var(--font-famil-btn);
     font-weight: 500;
-    background-color: var(--bg-dark-gray);
+    background-color: var(--border-color);
     background-image: none;
     background-position: 0 90%;
     background-repeat: repeat no-repeat;
@@ -136,8 +137,8 @@ img {
 }
 
 .active {
-    color: var(--bg-black);
-    background-color: var(--text-color);
+    color: var(--text-color);
+    background-color: var(--bg-loli);
 }
 
 /* overlay */
@@ -187,7 +188,7 @@ img {
 .aal {
     flex: 1;
     padding: 30px;
-    background-color: var(--bg-dark-gray);
+    background-color: var(--border-color);
     text-align: center;
     margin: 5px;
     border-bottom-left-radius: 15px 255px;

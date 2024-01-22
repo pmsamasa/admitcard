@@ -2,8 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     // Trigger click on the first button when the page loads
-    const firstButton = document.querySelector('.team-btn');
-    firstButton.click();
+    //const firstButton = document.querySelector('.team-btn');
+    //firstButton.click();
 });
 
 //-----------------------------------------------TEAM-A START---------------------------------------------------------------
@@ -1011,13 +1011,13 @@ function groupFour(obj) {
 //-----------------------------------------------TEAM-D TH END---------------------------------------------------------------
 
 //-----------------------------------------------TEAM-D END---------------------------------------------------------------
-function highlightButton(clickedButton) {
+function highlightButton(obj) {
     // Remove "active" class from all buttons
     const buttons = document.querySelectorAll('.team-btn');
     buttons.forEach(button => button.classList.remove('active'));
 
     // Add "active" class to the clicked button
-    clickedButton.classList.add('active');
+    obj.classList.add('active');
 }
 
 const btn = document.getElementById('bttn');
