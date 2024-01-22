@@ -17,10 +17,10 @@ function authenticateUser(teamFunction) {
 
 function checkCredentials(username, password) {
     // Replace these static values with your actual username and password for each team
-    const teamOneCredentials = { username: 'team1user', password: 'team1pass' };
-    const teamTwoCredentials = { username: 'team2user', password: 'team2pass' };
-    const teamThreeCredentials = { username: 'team3user', password: 'team3pass' };
-    const teamFourCredentials = { username: 'team4user', password: 'team4pass' };
+    const teamOneCredentials = { username: '1', password: '1' };
+    const teamTwoCredentials = { username: '2', password: '2' };
+    const teamThreeCredentials = { username: '3', password: '3' };
+    const teamFourCredentials = { username: '4', password: '4' };
 
     // Check if the provided username and password match the credentials for the respective team
     if (username === teamOneCredentials.username && password === teamOneCredentials.password) {
@@ -110,7 +110,6 @@ function groupOne(obj) {
                         category.innerHTML = data.table.rows[i].c[68].v;
                         class_space.innerHTML = data.table.rows[i].c[67].v;
                         dataSearch_al_on(i);
-
                         showContainerBox();
                         return i;
                     }
@@ -309,8 +308,8 @@ function groupTwo(obj) {
 
     let team_space = document.getElementById('team');//space on the card where the name of team is shown
     let nameOfTeam = obj.textContent;
-
     team_space.innerHTML = nameOfTeam;
+
     //-----------------------------------------------TEAM-B AL START---------------------------------------------------------------    
 
     let SHEET_ID_ = '1fy4PgnXgTnX9LeADb3v-Qp57Caz0C4tGjwRfbF1slQk';
@@ -399,9 +398,11 @@ function groupTwo(obj) {
             });
 
             function dataSearch_al_on(index) {
-                let colLength_items = colLength - 5
+                let colLength_items = colLength - 5;
+                console.log(data.table)
                 for (let i = 1; i < colLength_items; i++) {
-                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 51) {//add
+                    console.log(i)
+                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 64 || i == 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -567,7 +568,7 @@ function groupThree(obj) {
     //-----------------------------------------------TEAM-C AL START---------------------------------------------------------------
     let SHEET_ID_ = '1mhz_L4pnpQH_Z90LrDYh4e2Lj_GHEx-_M2GCd-GJwCo';
     let SHEET_TITLE_ = 'Sheet1';
-    let SHEET_RANGE_ = 'B3:BH31';
+    let SHEET_RANGE_ = 'B3:BS31';
 
     let FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
 
@@ -611,6 +612,7 @@ function groupThree(obj) {
                 // Clear the existing content in onstage_div
                 const onstage_div = document.getElementById("items-div");
                 onstage_div.innerHTML = '';
+                console.log(data.table)
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
@@ -654,7 +656,7 @@ function groupThree(obj) {
             function dataSearch_al_on(index) {
                 let colLength_items = colLength - 5
                 for (let i = 1; i < colLength_items; i++) {
-                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 51) {//add
+                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 64 || i == 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -821,7 +823,7 @@ function groupFour(obj) {
     //-----------------------------------------------TEAM-D AL START---------------------------------------------------------------
     let SHEET_ID_ = '13C4Rrjs30ZthjizAnBIsUIojjV88LbwKpCRSW4RXja4';
     let SHEET_TITLE_ = 'Sheet1';
-    let SHEET_RANGE_ = 'B3:BH31';
+    let SHEET_RANGE_ = 'B3:BS31';
 
     let FULL_URL_ = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID_ + '/gviz/tq?sheet=' + SHEET_TITLE_ + '&range=' + SHEET_RANGE_);
 
