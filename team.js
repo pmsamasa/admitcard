@@ -126,8 +126,11 @@ function groupOne(obj) {
 
             function insertElement_al_on(div, data) {
                 let newElement = document.createElement('p');
+                let signBlock = document.createElement('p');
                 newElement.className = 'programs';
+                signBlock.className = 'programs';
                 div.append(newElement);
+                div.append(signBlock);
                 newElement.innerHTML = data;
             }
 
@@ -231,8 +234,11 @@ function groupOne(obj) {
 
             function insertElement_al_on(div, data) {
                 let newElement = document.createElement('p');
+                let signBlock = document.createElement('p');
                 newElement.className = 'programs';
+                signBlock.className = 'programs';
                 div.append(newElement);
+                div.append(signBlock);
                 newElement.innerHTML = data;
             }
         }
@@ -358,8 +364,11 @@ function groupTwo(obj) {
 
             function insertElement_al_on(div, data) {
                 let newElement = document.createElement('p');
+                let signBlock = document.createElement('p');
                 newElement.className = 'programs';
+                signBlock.className = 'programs';
                 div.append(newElement);
+                div.append(signBlock);
                 newElement.innerHTML = data;
             }
         }
@@ -464,8 +473,11 @@ function groupTwo(obj) {
 
             function insertElement_al_on(div, data) {
                 let newElement = document.createElement('p');
+                let signBlock = document.createElement('p');
                 newElement.className = 'programs';
+                signBlock.className = 'programs';
                 div.append(newElement);
+                div.append(signBlock);
                 newElement.innerHTML = data;
             }
         }
@@ -591,8 +603,11 @@ function groupThree(obj) {
 
             function insertElement_al_on(div, data) {
                 let newElement = document.createElement('p');
+                let signBlock = document.createElement('p');
                 newElement.className = 'programs';
+                signBlock.className = 'programs';
                 div.append(newElement);
+                div.append(signBlock);
                 newElement.innerHTML = data;
             }
         }
@@ -697,8 +712,11 @@ function groupThree(obj) {
 
             function insertElement_al_on(div, data) {
                 let newElement = document.createElement('p');
+                let signBlock = document.createElement('p');
                 newElement.className = 'programs';
+                signBlock.className = 'programs';
                 div.append(newElement);
+                div.append(signBlock);
                 newElement.innerHTML = data;
             }
         }
@@ -825,8 +843,11 @@ function groupFour(obj) {
 
             function insertElement_al_on(div, data) {
                 let newElement = document.createElement('p');
+                let signBlock = document.createElement('p');
                 newElement.className = 'programs';
+                signBlock.className = 'programs';
                 div.append(newElement);
+                div.append(signBlock);
                 newElement.innerHTML = data;
             }
         }
@@ -929,8 +950,11 @@ function groupFour(obj) {
 
             function insertElement_al_on(div, data) {
                 let newElement = document.createElement('p');
+                let signBlock = document.createElement('p');
                 newElement.className = 'programs';
+                signBlock.className = 'programs';
                 div.append(newElement);
+                div.append(signBlock);
                 newElement.innerHTML = data;
             }
         }
