@@ -1,6 +1,7 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
 @font-face {
     font-family: Anek-Malayalam;
     src: url(AnekMalayalam-VariableFont_wdth\,wght.ttf);
@@ -11,13 +12,13 @@
     /* bg colors */
     --bg-black: hsl(42, 26%, 77%);
     --bg-dark-gray: hsl(345, 90%, 60%);
-    --bg-loli:hsl(41, 14%, 49%);
+    --bg-loli: hsl(41, 14%, 49%);
 
     /* border colors */
     --border-color: hsl(41, 22%, 69%);
 
     /* text color */
-    --text-color: hsl(0, 0%, 0%);   
+    --text-color: hsl(0, 0%, 0%);
 
     /* fonts */
     --font-size-head: clamp(27px, 4vw, 50px);
@@ -100,7 +101,7 @@ img {
     font-size: var(--font-size-btn);
     font-family: fantasy;
     font-weight: 200;
-    background-color: var(--bg-black);  
+    background-color: var(--bg-black);
     border: 2px solid hsl(41, 39%, 29%);
     cursor: pointer;
     border-radius: 10px;
@@ -197,10 +198,11 @@ img {
     .mem-list {
         padding: 0px;
     }
+
     .aal {
         padding: 10px;
     }
-  
+
 }
 
 /*lIGHTBOX SETUP*/
@@ -219,9 +221,9 @@ img {
     background-color: #fff;
     color: black;
     position: relative;
-    width: 50%;
+    width: 70%;
     height: 90%;
-    left: 25%;
+    left: 15%;
     top: 0;
     border-radius: 15px;
     display: flex;
@@ -238,6 +240,7 @@ img {
     align-items: center;
     margin: 0 auto;
 }
+
 #masa {
     border: none;
     text-transform: uppercase;
@@ -260,22 +263,35 @@ img {
     font-size: 20px;
     align-self: flex-start;
     border: 2px solid black;
-    width: 100%;
+    width: 81%;
     padding-left: 5px;
 }
 
 .cate-div {
     display: flex;
     flex-flow: row;
-    width: 100%;
+    width: 150%;
+    margin: 3px;
 }
-#cate, #class {
+.yoyi {
     border-radius: 5px;
     margin: 1px;
     font-weight: 600;
     font-size: 20px;
     border: 2px solid black;
-    width: 50%;
+    width: 19%;
+    padding-left: 5px;
+    text-transform: capitalize;
+}
+
+#cate,
+#class {
+    border-radius: 5px;
+    margin: 1px;
+    font-weight: 600;
+    font-size: 20px;
+    border: 2px solid black;
+    width: 81%;
     padding-left: 5px;
 }
 
@@ -290,15 +306,16 @@ img {
     font-family: Anek-Malayalam;
     border: 2px solid black;
     border-radius: 5px;
-    padding: 3px;
+    padding: 6px;
     margin: 5px;
 }
 
-#name, #team {
+#name,
+#team {
     align-self: flex-start;
     font-family: var(--font-famil);
     border: 2px solid;
-    width: 100%;
+    width: 81%;
     padding: 2px;
     margin: 1px;
     text-transform: uppercase;
@@ -319,11 +336,15 @@ img {
     height: 80px;
     border: 2px solid #000;
     border-radius: 5px;
-    padding: 10px; /* Optional: Add padding for better aesthetics */
-    text-align: center; /* Center the content horizontally */
-    line-height: 10px; /* Adjust line height for vertical centering */
-    margin-top: 20px; /* Optional: Add some space between elements */
-  }
+    padding: 10px;
+    /* Optional: Add padding for better aesthetics */
+    text-align: center;
+    /* Center the content horizontally */
+    line-height: 10px;
+    /* Adjust line height for vertical centering */
+    margin-top: 20px;
+    /* Optional: Add some space between elements */
+}
 
 
 @media print {
@@ -362,17 +383,22 @@ img {
         align-items: center;
         margin: 0 auto;
     }
+
     .items {
         text-align: center;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
     .cate-div {
         display: flex;
         flex-flow: row;
-        width: 100%;}
+        width: 150%;
+        margin: 3px;
+    }
 
-   
+
+
 
     .prin {
         visibility: hidden;
@@ -397,12 +423,12 @@ img {
     margin-left: 23%;
 }
 
-@media(max-width:600px){
+@media(max-width:600px) {
     #masa {
         font-size: 24px;
     }
 
-    .prin{
+    .prin {
         width: 15%;
         margin-left: 20%;
         top: 105px;
