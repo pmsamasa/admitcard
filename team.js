@@ -11,7 +11,7 @@ function authenticateUser(teamFunction) {
         teamFunction();
     } else {
         // If authentication fails, display an error message or take appropriate action
-        alert('dai swantham group aano nokkunne');
+        alert('try to use only your group');
     }
 }
 
