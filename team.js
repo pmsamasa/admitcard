@@ -262,7 +262,7 @@ function groupOne(obj) {
             function dataSearch_al_on(index) {
                 let colLength_items = colLength - 5
                 for (let i = 1; i < colLength_items; i++) {
-                    if (i == 21 || i == 22 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                    if (i == 20 || i == 21 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -517,7 +517,7 @@ function groupTwo(obj) {
             function dataSearch_al_on(index) {
                 let colLength_items = colLength - 5
                 for (let i = 1; i < colLength_items; i++) {
-                    if (i == 21 || i == 22 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                    if (i == 20 || i == 21 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -771,7 +771,7 @@ function groupThree(obj) {
             function dataSearch_al_on(index) {
                 let colLength_items = colLength - 5
                 for (let i = 1; i < colLength_items; i++) {
-                    if (i == 21 || i == 22 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                    if (i == 20 || i == 21 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -1023,7 +1023,7 @@ function groupFour(obj) {
             function dataSearch_al_on(index) {
                 let colLength_items = colLength - 5
                 for (let i = 1; i < colLength_items; i++) {
-                    if (i == 21 || i == 22 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                    if (i == 20 || i == 21 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
