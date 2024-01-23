@@ -74,6 +74,7 @@ img {
     text-transform: capitalize;
     font-family: var(--font-famil);
     margin-bottom: 3vw;
+    text-transform: uppercase;
 }
 
 
@@ -91,31 +92,19 @@ img {
 
 .team-btn {
     flex: 1;
-    padding: 50px;
+    padding: 10px 14px;
     text-align: center;
-    color: var(--text-color);
+    color: hsl(39, 84%, 10%);
     margin: 5px;
     text-transform: uppercase;
     font-size: var(--font-size-btn);
-    font-family: var(--font-famil-btn);
-    font-weight: 500;
-    background-color: var(--border-color);
-    background-image: none;
-    background-position: 0 90%;
-    background-repeat: repeat no-repeat;
-    background-size: 4px 3px;
-    border-style: solid;
-    border-width: 5px;
-    box-shadow: var(--text-color) 15px 28px 25px -18px;
-    box-sizing: border-box;
+    font-family: fantasy;
+    font-weight: 200;
+    background-color: var(--bg-black);  
+    border: 2px solid hsl(41, 39%, 29%);
     cursor: pointer;
-    outline: none;
-    text-decoration: none;
-    transition: all 235ms ease-in-out;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
+    border-radius: 10px;
+    box-shadow: 4px 4px hsl(41, 39%, 29%);
 }
 
 @media (max-width: 900px) {
@@ -191,13 +180,10 @@ img {
     background-color: var(--border-color);
     text-align: center;
     margin: 5px;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    border: 2px solid var(--text-color);
-    box-shadow: var(--text-color) -5px 15px 25px -15px;
-    color: var(--text-color);
+    border-radius: 10px;
+    border: 2px solid hsl(41, 39%, 29%);
+    box-shadow: 4px 4px hsl(41, 39%, 29%);
+    color: hsl(39, 84%, 10%);
     font-size: var(--font-size-mem);
 }
 
