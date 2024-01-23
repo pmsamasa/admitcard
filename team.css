@@ -256,7 +256,7 @@ img {
 }
 
 #num-admit {
-    
+
     border-radius: 5px;
     margin: 1px;
     font-weight: 600;
@@ -273,6 +273,7 @@ img {
     width: 150%;
     margin: 3px;
 }
+
 .yoyi {
     border-radius: 5px;
     margin: 1px;
@@ -369,19 +370,39 @@ img {
         align-items: center;
         width: 8.27in;
         height: 13.69in;
-        top: -15%;
-        left: -5%;
+        top: -25%;
+        left: 0;
         border-radius: 0;
     }
 
     .admit-card {
         display: block;
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 1000%;
+        max-height: 1000%;
         display: flex;
         flex-flow: column;
         align-items: center;
         margin: 0 auto;
+    }
+
+    #name,
+    #team,
+    #cate,
+    #class,
+    #num-admit {
+        width: 70%;
+    }
+
+    #admit-head {
+        margin-top: 10px;
+    }
+
+    .yoyi {
+        width: 30%;
+    }
+
+    #masa2 {
+        margin-bottom: 20px;
     }
 
     .items {
@@ -393,8 +414,7 @@ img {
     .cate-div {
         display: flex;
         flex-flow: row;
-        width: 150%;
-        margin: 3px;
+        width: 100%;
     }
 
 
@@ -435,9 +455,21 @@ img {
     }
 
     .lightbox {
-        width: 90%;
-        height: 70%;
+        width: 94%;
+        height: 80%;
         left: 5%;
         top: 100px;
+    }
+
+    .cate-div {
+        display: flex;
+        flex-flow: row;
+        width: 100%;
+    }
+
+    .items {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
 }
