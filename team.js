@@ -143,11 +143,11 @@ function groupOne(obj) {
                 }
             });
 
-
-
+            var al_off_start = 22;//edit here
+            var al_off_end = 52;
             function dataSearch_al_on(index) {
-                let colLength_items = colLength - 5
-                for (let i = 1; i < colLength_items; i++) {
+                let colLength_items = al_off_end
+                for (let i = al_off_start; i < colLength_items; i++) {
                     if (i == 23 || i == 24 || i == 49 || i == 50 || i == 51) {//add
                         console.log("continued : " + i);
                         continue;
@@ -259,9 +259,13 @@ function groupOne(obj) {
                 }
             });
 
+            var th_off_start = 22;//edit here
+            var th_off_end = 37;
             function dataSearch_al_on(index) {
-                let colLength_items = colLength - 5
-                for (let i = 1; i < colLength_items; i++) {
+                console.log('data.table');
+                console.log(data.table);
+                let colLength_items = th_off_end;
+                for (let i = th_off_start; i < colLength_items; i++) {
                     if (i == 20 || i == 21 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
                         console.log("continued : " + i);
                         continue;
