@@ -51,9 +51,9 @@ function groupOne(obj) {
     container3.style.display = 'none';
     container4.style.display = 'none';
 
-    let team_space = document.getElementById('team');//space on the card where the name of team is shown
-    let nameOfTeam = obj.textContent;
-    team_space.innerHTML = nameOfTeam;
+    //let team_space = document.getElementById('team');//space on the card where the name of team is shown
+    //let nameOfTeam = obj.textContent;
+    //team_space.innerHTML = nameOfTeam;
 
     //-----------------------------------------------TEAM-A AL START---------------------------------------------------------------
     let SHEET_ID_ = '1U9sExd3ImkNR325OOD9QLcpr_1HRgbWSi3Ammc6Lstw';
@@ -306,9 +306,9 @@ function groupTwo(obj) {
     container3.style.display = 'none';
     container4.style.display = 'none';
 
-    let team_space = document.getElementById('team');//space on the card where the name of team is shown
-    let nameOfTeam = obj.textContent;
-    team_space.innerHTML = nameOfTeam;
+    //let team_space = document.getElementById('team');//space on the card where the name of team is shown
+    //let nameOfTeam = obj.textContent;
+    //team_space.innerHTML = nameOfTeam;
 
     //-----------------------------------------------TEAM-B AL START---------------------------------------------------------------    
 
@@ -561,10 +561,10 @@ function groupThree(obj) {
     container3.style.display = 'block';
     container4.style.display = 'none';
 
-    let team_space = document.getElementById('team');//space on the card where the name of team is shown
-    let nameOfTeam = obj.textContent;
+    //let team_space = document.getElementById('team');//space on the card where the name of team is shown
+    //let nameOfTeam = obj.textContent;
 
-    team_space.innerHTML = nameOfTeam;
+    //team_space.innerHTML = nameOfTeam;
     //-----------------------------------------------TEAM-C AL START---------------------------------------------------------------
     let SHEET_ID_ = '1mhz_L4pnpQH_Z90LrDYh4e2Lj_GHEx-_M2GCd-GJwCo';
     let SHEET_TITLE_ = 'Sheet1';
@@ -815,10 +815,10 @@ function groupFour(obj) {
     container3.style.display = 'none';
     container4.style.display = 'block';
 
-    let team_space = document.getElementById('team');//space on the card where the name of team is shown
-    let nameOfTeam = obj.textContent;
+    //let team_space = document.getElementById('team');//space on the card where the name of team is shown
+    //let nameOfTeam = obj.textContent;
 
-    team_space.innerHTML = nameOfTeam;
+    //team_space.innerHTML = nameOfTeam;
 
     //-----------------------------------------------TEAM-D AL START---------------------------------------------------------------
     let SHEET_ID_ = '13C4Rrjs30ZthjizAnBIsUIojjV88LbwKpCRSW4RXja4';

@@ -245,11 +245,11 @@ img {
     border: none;
     text-transform: uppercase;
     font-family: var(--font-famil);
-    border-bottom: 2px solid black;
+
 }
 
 #admit-head {
-    border-bottom: 2px solid black;
+
     text-transform: uppercase;
     font-family: var(--font-famil);
     margin-bottom: 5px;
@@ -307,11 +307,22 @@ img {
     font-family: Anek-Malayalam;
     border: 2px solid black;
     border-radius: 5px;
-    padding: 6px;
-    margin: 5px;
+    padding: 3px;
+    margin: 2px;
 }
 
-#name,
+#name {
+    align-self: flex-start;
+    font-family: var(--font-famil);
+    border: 2px solid;
+    width: 81%;
+    padding: 2px;
+    margin: 1px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
 #team {
     align-self: flex-start;
     font-family: var(--font-famil);
@@ -322,6 +333,7 @@ img {
     text-transform: uppercase;
     border-radius: 5px;
     padding-left: 5px;
+    height: 28px;
 }
 
 #masa2 {
@@ -347,6 +359,16 @@ img {
     /* Optional: Add some space between elements */
 }
 
+hr {
+    /* Reset any styles that might hide it */
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    border: 1px solid #000;
+    /* Add a border to see if it appears */
+    width: 100%;
+}
+
 
 @media print {
 
@@ -370,19 +392,17 @@ img {
         align-items: center;
         width: 8.27in;
         height: 13.69in;
-        top: -25%;
         left: 0;
         border-radius: 0;
     }
 
     .admit-card {
         display: block;
-        max-width: 1000%;
-        max-height: 1000%;
+        width: 8.27in;
+        height: 13.69in;
         display: flex;
         flex-flow: column;
         align-items: center;
-        margin: 0 auto;
     }
 
     #name,
@@ -390,7 +410,7 @@ img {
     #cate,
     #class,
     #num-admit {
-        width: 70%;
+        width: 78%;
     }
 
     #admit-head {
@@ -398,11 +418,23 @@ img {
     }
 
     .yoyi {
-        width: 30%;
+        width: 15%;
     }
 
     #masa2 {
-        margin-bottom: 20px;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+
+    #masa {
+        font-size: 40px;
+    }
+
+    #admit-head {
+        border: 2px solid black;
+        padding: 3px;
+        border-radius: 10px;
+        font-size: 30px;
     }
 
     .items {
@@ -414,7 +446,9 @@ img {
     .cate-div {
         display: flex;
         flex-flow: row;
+        justify-content: flex-start;
         width: 100%;
+        margin-top: 3px;
     }
 
 
