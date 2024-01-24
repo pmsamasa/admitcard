@@ -410,11 +410,12 @@ hr {
     #cate,
     #class,
     #num-admit {
-        width: 78%;
+        width: 75%;
     }
 
     #admit-head {
         margin-top: 10px;
+        margin-bottom: 50px;
     }
 
     .yoyi {
