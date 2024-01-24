@@ -307,8 +307,9 @@ img {
     font-family: Anek-Malayalam;
     border: 2px solid black;
     border-radius: 5px;
-    padding: 3px;
+    padding: 6px 25px;
     margin: 2px;
+    
 }
 
 #name {
@@ -424,7 +425,7 @@ hr {
 
     #masa2 {
         margin-bottom: 5px;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     #masa {
