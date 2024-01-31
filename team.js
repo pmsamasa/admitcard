@@ -259,8 +259,9 @@ function groupOne(obj) {
                 }
             });
 
+            console.log(data.table)
             var th_off_start = 22;//edit here
-            var th_off_end = 37;
+            var th_off_end = 38;
             function dataSearch_al_on(index) {
                 console.log('data.table');
                 console.log(data.table);
@@ -521,7 +522,7 @@ function groupTwo(obj) {
             });
 
             var th_off_start = 22;//edit here
-            var th_off_end = 37; 
+            var th_off_end = 38; 
             function dataSearch_al_on(index) {
                 let colLength_items = th_off_end
                 for (let i = th_off_start; i < colLength_items; i++) {
@@ -779,7 +780,7 @@ function groupThree(obj) {
             });
             
             var th_off_start = 22;//edit here
-            var th_off_end = 37;
+            var th_off_end = 38;
             function dataSearch_al_on(index) {
                 let colLength_items = th_off_end
                 for (let i = th_off_start; i < colLength_items; i++) {
@@ -1035,7 +1036,7 @@ function groupFour(obj) {
             });
             
             var th_off_start = 22;//edit here
-            var th_off_end = 37;
+            var th_off_end = 38;
             function dataSearch_al_on(index) {
                 let colLength_items = th_off_end
                 for (let i = th_off_start; i < colLength_items; i++) {
