@@ -110,9 +110,9 @@ function groupOne(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
-                        num_admit.innerHTML = data.table.rows[i].c[69].v;
-                        category.innerHTML = data.table.rows[i].c[68].v;
-                        class_space.innerHTML = data.table.rows[i].c[67].v;
+                        num_admit.innerHTML = data.table.rows[i].c[68].v;
+                        category.innerHTML = data.table.rows[i].c[67].v;
+                        class_space.innerHTML = data.table.rows[i].c[66].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -147,12 +147,12 @@ function groupOne(obj) {
                 }
             });
 
-            var al_off_start = 22;//edit here
-            var al_off_end = 52;
+            var al_off_start = 0;//edit here
+            var al_off_end = 64;
             function dataSearch_al_on(index) {
                 let colLength_items = al_off_end
                 for (let i = al_off_start; i < colLength_items; i++) {
-                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 51) {//add
+                    if (i >= 22 && i <= 50) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -190,8 +190,6 @@ function groupOne(obj) {
             let data = JSON.parse(rep.substr(47).slice(0, -2));
             var rowLength = data.table.rows.length;//parent div containin the card div
 
-            console.log(data.table)
-
             for (let i = 0; i < rowLength; i++) {
                 if (data.table.rows[i].c[0].v != null) {
                     let newDiv = document.createElement('div');
@@ -225,9 +223,9 @@ function groupOne(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
-                        num_admit.innerHTML = data.table.rows[i].c[69].v;
-                        category.innerHTML = data.table.rows[i].c[68].v;
-                        class_space.innerHTML = data.table.rows[i].c[67].v;
+                        num_admit.innerHTML = data.table.rows[i].c[68].v;
+                        category.innerHTML = data.table.rows[i].c[67].v;
+                        class_space.innerHTML = data.table.rows[i].c[66].v;
                         dataSearch_al_on(i);
 
                         showContainerBox();
@@ -263,15 +261,12 @@ function groupOne(obj) {
                 }
             });
 
-            console.log(data.table)
-            var th_off_start = 22;//edit here
-            var th_off_end = 38;
+            var th_off_start = 0;//edit here
+            var th_off_end = 64;
             function dataSearch_al_on(index) {
-                console.log('data.table');
-                console.log(data.table);
                 let colLength_items = th_off_end;
                 for (let i = th_off_start; i < colLength_items; i++) {
-                    if (i == 20 || i == 21 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                    if (i >= 19 && i <= 38 || i >= 52 && i <= 64) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -369,9 +364,9 @@ function groupTwo(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
-                        num_admit.innerHTML = data.table.rows[i].c[69].v;
-                        category.innerHTML = data.table.rows[i].c[68].v;
-                        class_space.innerHTML = data.table.rows[i].c[67].v;
+                        num_admit.innerHTML = data.table.rows[i].c[68].v;
+                        category.innerHTML = data.table.rows[i].c[67].v;
+                        class_space.innerHTML = data.table.rows[i].c[66].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -406,14 +401,13 @@ function groupTwo(obj) {
                 }
             });
 
-            var al_off_start = 22;//edit here
-            var al_off_end = 52;
+            console.log(data.table.cols)
+            var al_off_start = 0;//edit here
+            var al_off_end = 64;
             function dataSearch_al_on(index) {
                 let colLength_items = al_off_end
-                console.log(data.table)
                 for (let i = al_off_start; i < colLength_items; i++) {
-                    console.log(i)
-                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 64 || i == 65) {//add
+                    if (i >= 23 && i <= 50 || i == 64 || i == 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -488,9 +482,9 @@ function groupTwo(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
-                        num_admit.innerHTML = data.table.rows[i].c[69].v;
-                        category.innerHTML = data.table.rows[i].c[68].v;
-                        class_space.innerHTML = data.table.rows[i].c[67].v;
+                        num_admit.innerHTML = data.table.rows[i].c[68].v;
+                        category.innerHTML = data.table.rows[i].c[67].v;
+                        class_space.innerHTML = data.table.rows[i].c[66].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -525,12 +519,12 @@ function groupTwo(obj) {
                 }
             });
 
-            var th_off_start = 22;//edit here
-            var th_off_end = 38; 
+            var th_off_start = 0;//edit here
+            var th_off_end = 64;
             function dataSearch_al_on(index) {
-                let colLength_items = th_off_end
+                let colLength_items = th_off_end;
                 for (let i = th_off_start; i < colLength_items; i++) {
-                    if (i == 20 || i == 21 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                    if (i >= 20 && i <= 39 || i >= 53 && i <= 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -629,9 +623,9 @@ function groupThree(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
-                        num_admit.innerHTML = data.table.rows[i].c[69].v;
-                        category.innerHTML = data.table.rows[i].c[68].v;
-                        class_space.innerHTML = data.table.rows[i].c[67].v;
+                        num_admit.innerHTML = data.table.rows[i].c[68].v;
+                        category.innerHTML = data.table.rows[i].c[67].v;
+                        class_space.innerHTML = data.table.rows[i].c[66].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -666,12 +660,12 @@ function groupThree(obj) {
                 }
             });
 
-            var al_off_start = 22;//edit here
-            var al_off_end = 52;
+            var al_off_start = 0;//edit here
+            var al_off_end = 64;
             function dataSearch_al_on(index) {
                 let colLength_items = al_off_end
                 for (let i = al_off_start; i < colLength_items; i++) {
-                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 64 || i == 65) {//add
+                    if (i >= 23 && i <= 50 || i == 64 || i == 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -746,9 +740,9 @@ function groupThree(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
-                        num_admit.innerHTML = data.table.rows[i].c[69].v;
-                        category.innerHTML = data.table.rows[i].c[68].v;
-                        class_space.innerHTML = data.table.rows[i].c[67].v;
+                        num_admit.innerHTML = data.table.rows[i].c[68].v;
+                        category.innerHTML = data.table.rows[i].c[67].v;
+                        class_space.innerHTML = data.table.rows[i].c[66].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -783,12 +777,12 @@ function groupThree(obj) {
                 }
             });
             
-            var th_off_start = 22;//edit here
-            var th_off_end = 38;
+            var th_off_start = 0;//edit here
+            var th_off_end = 64;
             function dataSearch_al_on(index) {
-                let colLength_items = th_off_end
+                let colLength_items = th_off_end;
                 for (let i = th_off_start; i < colLength_items; i++) {
-                    if (i == 20 || i == 21 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                    if (i >= 20 && i <= 39 || i >= 53 && i <= 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -887,9 +881,9 @@ function groupFour(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
-                        num_admit.innerHTML = data.table.rows[i].c[69].v;
-                        category.innerHTML = data.table.rows[i].c[68].v;
-                        class_space.innerHTML = data.table.rows[i].c[67].v;
+                        num_admit.innerHTML = data.table.rows[i].c[68].v;
+                        category.innerHTML = data.table.rows[i].c[67].v;
+                        class_space.innerHTML = data.table.rows[i].c[66].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -924,12 +918,12 @@ function groupFour(obj) {
                 }
             });
 
-            var al_off_start = 22;//edit here
-            var al_off_end = 52;
+            var al_off_start = 0;//edit here
+            var al_off_end = 64;
             function dataSearch_al_on(index) {
                 let colLength_items = al_off_end
                 for (let i = al_off_start; i < colLength_items; i++) {
-                    if (i == 23 || i == 24 || i == 49 || i == 50 || i == 51) {//add
+                    if (i >= 23 && i <= 51 || i == 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
@@ -1002,9 +996,9 @@ function groupFour(obj) {
                 for (let i = 0; i < rowLength; i++) {
                     if (data.table.rows[i].c[0].v == name_div) {
                         name_space.innerHTML = data.table.rows[i].c[0].v;
-                        num_admit.innerHTML = data.table.rows[i].c[69].v;
-                        category.innerHTML = data.table.rows[i].c[68].v;
-                        class_space.innerHTML = data.table.rows[i].c[67].v;
+                        num_admit.innerHTML = data.table.rows[i].c[68].v;
+                        category.innerHTML = data.table.rows[i].c[67].v;
+                        class_space.innerHTML = data.table.rows[i].c[66].v;
                         dataSearch_al_on(i);
                         showContainerBox();
                         return i;
@@ -1039,12 +1033,12 @@ function groupFour(obj) {
                 }
             });
             
-            var th_off_start = 22;//edit here
-            var th_off_end = 38;
+            var th_off_start = 0;//edit here
+            var th_off_end = 64;
             function dataSearch_al_on(index) {
-                let colLength_items = th_off_end
+                let colLength_items = th_off_end;
                 for (let i = th_off_start; i < colLength_items; i++) {
-                    if (i == 20 || i == 21 || i == 38 || i == 39 || i == 53 || i == 54 || i == 55 || i == 56 || i == 57 || i == 58 || i == 59 || i == 60 || i == 61 || i == 62 || i == 63 || i == 64 || i == 65) {//add
+                    if (i >= 20 && i <= 39 || i >= 53 && i <= 65) {//add
                         console.log("continued : " + i);
                         continue;
                     } else {
