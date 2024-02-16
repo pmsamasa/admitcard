@@ -17,10 +17,14 @@ function authenticateUser(teamFunction) {
 
 function checkCredentials(username, password) {
     // Replace these static values with your actual username and password for each team
-    const teamOneCredentials = { username: 'mohammedsajad', password: '974588' };
-    const teamTwoCredentials = { username: 'winners', password: 'winners111' };
-    const teamThreeCredentials = { username: '2002', password: '1310' }; 
-    const teamFourCredentials = { username: 'suhail@123', password: '9048' };
+    const teamOneCredentials = { username: '1', password: '1' };
+    const teamTwoCredentials = { username: '2', password: '2' };
+    const teamThreeCredentials = { username: '3', password: '3' }; 
+    const teamFourCredentials = { username: '4', password: '4' };
+    // const teamOneCredentials = { username: 'mohammedsajad', password: '974588' };
+    // const teamTwoCredentials = { username: 'winners', password: 'winners111' };
+    // const teamThreeCredentials = { username: '2002', password: '1310' }; 
+    // const teamFourCredentials = { username: 'suhail@123', password: '9048' };
 
     // Check if the provided username and password match the credentials for the respective team
     if (username === teamOneCredentials.username && password === teamOneCredentials.password) {

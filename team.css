@@ -9,13 +9,14 @@
 
 /* Variables */
 :root {
+    --maincolor:#f6ab06;
     /* bg colors */
-    --bg-black: hsl(42, 26%, 77%);
-    --bg-dark-gray: hsl(345, 90%, 60%);
+    --bg-black: hsl(0, 0%, 100%);
+    --bg-dark-gray: #f6ab06;
     --bg-loli: hsl(41, 14%, 49%);
 
     /* border colors */
-    --border-color: hsl(41, 22%, 69%);
+    --border-color: hsl(0, 0%, 100%);
 
     /* text color */
     --text-color: hsl(0, 0%, 0%);
@@ -95,17 +96,17 @@ img {
     flex: 1;
     padding: 1px 9px;
     text-align: center;
-    color: hsl(39, 84%, 10%);
+    color: hsl(0, 0%, 0%);
     margin: 5px;
     text-transform: uppercase;
     font-size: var(--font-size-btn);
     font-family: fantasy;
     font-weight: 200;
     background-color: var(--bg-black);
-    border: 2px solid hsl(41, 39%, 29%);
+    border: 2px solid hsl(39, 77%, 95%);
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 4px 4px hsl(41, 39%, 29%);
+    box-shadow: 4px 4px #393939;
 }
 
 @media (max-width: 900px) {
@@ -128,7 +129,7 @@ img {
 
 .active {
     color: var(--text-color);
-    background-color: var(--bg-loli);
+    background-color: var(--maincolor);
 }
 
 /* overlay */
@@ -178,18 +179,19 @@ img {
 .aal {
     flex: 1;
     padding: 30px;
-    background-color: var(--border-color);
+    background-color: white;
     text-align: center;
     margin: 5px;
     border-radius: 10px;
-    border: 2px solid hsl(41, 39%, 29%);
-    box-shadow: 4px 4px hsl(41, 39%, 29%);
-    color: hsl(39, 84%, 10%);
+    border: 2px solid hsl(41, 88%, 94%);
+    box-shadow: 4px 4px #393939;
+    color: hsl(41, 90%, 4%);
     font-size: var(--font-size-mem);
 }
 
 
 .aal:hover {
+    background-color: var(--maincolor);
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
     transform: translate3d(0, 2px, 0);
 }
